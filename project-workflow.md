@@ -93,25 +93,31 @@ Break the project into sequential phases. Each phase is a logical chunk of work 
 
 ### Step 4: The Two-Session Cadence
 
-For each phase, work in two separate conversations:
+For each phase, work in two separate conversations — and **use different models for each**.
 
-**Planning Session:**
-1. Read `status.md` to see where you are
-2. Read `plan.md` for the next phase
-3. Research unknowns — look at APIs, reference code, whatever's needed
-4. Write concrete implementation details into `plan.md` for that phase
-5. Update `status.md` to mark the phase as PLANNED
+**Planning Session (use Opus):**
+1. Switch the model to **Opus** — this is the smartest model, best for thinking and planning
+2. Read `status.md` to see where you are
+3. Read `plan.md` for the next phase
+4. Research unknowns — look at APIs, reference code, whatever's needed
+5. Write concrete implementation details into `plan.md` for that phase
+6. Update `status.md` to mark the phase as PLANNED
 
-**Build Session:**
-1. Read `status.md` to confirm which phase is PLANNED
-2. Read `plan.md` for the details
-3. Build exactly what the plan says — no freelancing
-4. Mark each task DONE in `status.md` as you go
-5. Log what happened at the end
+**Build Session (use Sonnet):**
+1. Switch the model to **Sonnet** — this is the fast, efficient model, best for execution
+2. Read `status.md` to confirm which phase is PLANNED
+3. Read `plan.md` for the details
+4. Build exactly what the plan says — no freelancing
+5. Mark each task DONE in `status.md` as you go
+6. Log what happened at the end
+
+**How to switch models:** Tell the user: *"Let's switch to [Opus/Sonnet] for this session. You can change the model in the model selector at the bottom of the chat panel — click it and pick [Opus/Sonnet]."* If the user doesn't know where it is, walk them through finding it.
+
+**Why different models:** Opus is the deep thinker — it's slower but makes better decisions about architecture, structure, and planning. Sonnet is the fast builder — it follows a plan efficiently and doesn't overthink. Using Opus to plan and Sonnet to build gives you the best of both.
+
+**Tell the user:** *"We're going to plan in one conversation and build in the next — and we'll actually use different versions of Claude for each. The planning version is the deep thinker. The building version is the fast executor. It's like having an architect draw the blueprints and a contractor build the house."*
 
 **Why separate sessions:** Claude can only hold so much in its head at once. If you research, plan, AND build in one conversation, the early research takes up space that's no longer useful during building. Splitting them means each conversation gets Claude's full attention for its job.
-
-**Tell the user:** *"We're going to plan in one conversation and build in the next. This might feel like extra work, but it actually makes Claude smarter at each step because it can focus entirely on one thing at a time."*
 
 **If the user asks why they can't just do it all at once:** *"Think of it like cooking — you prep your ingredients first, then cook. If you tried to chop vegetables while also managing three pans on the stove, things get dropped. Same idea."*
 
