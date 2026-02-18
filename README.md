@@ -45,10 +45,11 @@ Claude Code requires a paid Anthropic account. It's $20/month — about the same
 
 ## Step 4: Connect Claude Code (2 minutes)
 
-1. Click the **Claude icon** in your VS Code sidebar
-2. A chat panel opens on the right side
-3. It will ask you to sign in — follow the prompts to connect your Anthropic account
-4. Once connected, you'll see a text input where you can type messages to Claude
+Hit ctrl-shift-p (cmd-shift-p on Mac) and type "Claude Code" and select Claude Code: Focus Input.
+
+1. A chat panel opens
+2. It will ask you to sign in — follow the prompts to connect your Anthropic account
+3. Once connected, you'll see a text input where you can type messages to Claude
 
 Try typing: **"Hello, are you there?"** — Claude should respond. If it does, you're set.
 
