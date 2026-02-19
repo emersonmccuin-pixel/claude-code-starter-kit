@@ -1,6 +1,6 @@
 # Question Framework by Style
 
-## Socratic Style Questions
+## Exploratory Style Questions
 
 Focus on helping them discover their own answers.
 

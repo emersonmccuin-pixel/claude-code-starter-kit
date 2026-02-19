@@ -3,21 +3,34 @@
 Go from zero to building your first project with Claude Code in under an hour. No coding experience required.
 
 This kit includes two tools — an interviewer that helps you figure out what to build, and a workflow that helps you actually build it. Both are written for Claude to read, not you. Your job is to install them and follow Claude's lead.
+<br />
 
----
+***
+
+## The Whole Process at a Glance
+
+```
+Install VS Code --> Install Claude Code Extension --> Get Claude Pro ($20/mo)
+    --> Create a workspace folder --> Install this starter kit
+    --> /interviewer (figure out what to build)
+    --> Project workflow (build it step by step)
+    --> You have a thing. In under an hour.
+```
+
+***
 
 ## Step 1: Install VS Code (5 minutes)
 
 VS Code is a free text editor. That's all it is — a place to work with files. You're not becoming a developer by installing it.
 
-1. Go to [https://code.visualstudio.com](https://code.visualstudio.com)
+1. Go to <https://code.visualstudio.com>
 2. Download the version for your computer (Windows, Mac, or Linux)
 3. Install it like any other app
 4. Open it
 
 You'll see a welcome screen. You can close it — we won't need it.
 
----
+***
 
 ## Step 2: Install Claude Code Extension (2 minutes)
 
@@ -28,20 +41,20 @@ The Claude Code extension adds a chat panel to VS Code where you can talk to Cla
 3. Find the one by **Anthropic** and click **Install**
 4. After it installs, you'll see a Claude icon appear in your left sidebar
 
----
+***
 
 ## Step 3: Get a Claude Account (3 minutes)
 
 Claude Code requires a paid Anthropic account. It's $20/month — about the same as Netflix. You can cancel anytime.
 
-1. Go to [https://console.anthropic.com](https://console.anthropic.com)
+1. Go to <https://console.anthropic.com>
 2. Create an account (email + password, or sign in with Google)
 3. Subscribe to the **Pro plan** ($20/month)
 4. That's it — no API keys, no configuration, no setup beyond this
 
 **Not sure if it's worth it?** Try it for one month. If it doesn't change how you work, cancel. No contracts, no hassle.
 
----
+***
 
 ## Step 4: Connect Claude Code (2 minutes)
 
@@ -53,15 +66,17 @@ Hit ctrl-shift-p (cmd-shift-p on Mac) and type "Claude Code" and select Claude C
 
 Try typing: **"Hello, are you there?"** — Claude should respond. If it does, you're set.
 
----
+***
 
 ## Step 5: Create Your Workspace (2 minutes)
 
 You need a folder on your computer where your projects will live. Claude works with files and folders — this is its workspace.
 
 1. Create a folder somewhere easy to find. Suggestions:
-   - **Windows:** `C:\Claude Code Projects\`
-   - **Mac:** `~/Claude Code Projects/`
+
+   * **Windows:** `C:\Claude Code Projects\`
+
+   * **Mac:** `~/Claude Code Projects/`
 2. In VS Code, go to **File > Open Folder** and select the folder you just created
 3. You should see your empty folder in the file explorer on the left
 
@@ -71,22 +86,25 @@ You need a folder on your computer where your projects will live. Claude works w
 
 Claude will create the folder and file for you. That CLAUDE.md file is how Claude remembers your preferences — it reads it every time you start a conversation.
 
----
+***
 
 ## Step 6: Install the Starter Kit (2 minutes)
 
 Now let's give Claude some tools to work with. Type this into the Claude chat:
 
-> Please install the interviewer skill and project workflow from https://github.com/emersonmccuin-pixel/claude-code-starter-kit — read the README there for the file locations, then download and install everything.
+> Please install the interviewer skill and project workflow from <https://github.com/emersonmccuin-pixel/claude-code-starter-kit> — read the README there for the file locations, then download and install everything.
 
 Claude will:
-- Read this repo
-- Install the **interviewer skill** (so you can type `/interviewer` anytime)
-- Download the **project workflow** into your project folder
+
+* Read this repo
+
+* Install the **interviewer skill** (so you can type `/interviewer` anytime)
+
+* Download the **project workflow** into your project folder
 
 When it's done, you'll have two new tools ready to go.
 
----
+***
 
 ## Step 7: Figure Out What to Build (10 minutes)
 
@@ -98,22 +116,22 @@ Claude will ask you what interview style you want (casual questions, structured 
 
 **Don't know what to build?** Here are some ideas:
 
-| Personal | Work |
-|----------|------|
-| Budget tracker | Meeting notes organizer |
-| Meal planner | Email draft assistant |
-| Vacation itinerary | Weekly status report generator |
-| Journal / diary system | Client project tracker |
-| Gift idea organizer | Team knowledge base |
-| Home inventory | Onboarding guide for new hires |
-| Reading list tracker | Competitive analysis template |
-| Habit tracker | Invoice generator |
+| Personal               | Work                           |
+| ---------------------- | ------------------------------ |
+| Budget tracker         | Meeting notes organizer        |
+| Meal planner           | Email draft assistant          |
+| Vacation itinerary     | Weekly status report generator |
+| Journal / diary system | Client project tracker         |
+| Gift idea organizer    | Team knowledge base            |
+| Home inventory         | Onboarding guide for new hires |
+| Reading list tracker   | Competitive analysis template  |
+| Habit tracker          | Invoice generator              |
 
 Pick something small for your first project. You can always go bigger later.
 
 At the end of the interview, Claude will give you a summary of what you're building, key decisions, and next steps.
 
----
+***
 
 ## Step 8: Build It (30-45 minutes)
 
@@ -122,6 +140,7 @@ Claude already knows what you want to build (from the interview). The project wo
 > Let's start building based on the interview we just did. Use the project workflow.
 
 Claude will:
+
 1. Create a plan with phases
 2. Set up a status tracker
 3. Walk you through each phase, explaining what it's doing and why
@@ -136,7 +155,7 @@ You don't need to understand the technical details. Claude explains everything i
 
 It will stop and reorient you. That's what it's designed to do.
 
----
+***
 
 ## What's In This Repo
 
@@ -160,22 +179,27 @@ Pairs with the interviewer: the interview figures out *what* you want to build, 
 
 Both files are **instructions for Claude**, not documentation for you. They tell Claude:
 
-- What to do
-- How to explain things in plain language
-- When to check in with you
-- Why the process works the way it does
+* What to do
+
+* How to explain things in plain language
+
+* When to check in with you
+
+* Why the process works the way it does
 
 You don't need to read or memorize them. Just install them and follow Claude's lead.
 
----
+***
 
 ## Installing Manually (If You Prefer)
 
 **Interviewer Skill:**
 
 1. Copy the `interviewer/` folder (including `references/`) into your Claude Code skills directory:
-   - **Windows:** `C:\Users\[you]\.claude\skills\interviewer\`
-   - **Mac/Linux:** `~/.claude/skills/interviewer/`
+
+   * **Windows:** `C:\Users\[you]\.claude\skills\interviewer\`
+
+   * **Mac/Linux:** `~/.claude/skills/interviewer/`
 2. That's it. Type `/interviewer` in Claude Code to use it.
 
 **Project Workflow:**
@@ -184,7 +208,7 @@ You don't need to read or memorize them. Just install them and follow Claude's l
 2. Start a Claude Code conversation in that project
 3. Claude reads the file and walks you through the process
 
----
+***
 
 ## FAQ
 
@@ -205,20 +229,6 @@ Tell Claude. Literally type "something went wrong" or "I'm stuck" and it will he
 
 **Can I share this with other people?**
 Yes. That's why it's public. Share the link: `github.com/emersonmccuin-pixel/claude-code-starter-kit`
-
----
-
-## The Whole Process at a Glance
-
-```
-Install VS Code --> Install Claude Code Extension --> Get Claude Pro ($20/mo)
-    --> Create a workspace folder --> Install this starter kit
-    --> /interviewer (figure out what to build)
-    --> Project workflow (build it step by step)
-    --> You have a thing. In under an hour.
-```
-
----
 
 *Built by Emerson for the AI @ Work Pittsburgh meetup, February 2026.*
 *Questions? Open an issue or ask Claude Code — it knows how to help.*
