@@ -1,8 +1,8 @@
 # Claude Code Starter Kit
 
-Go from zero to building your first project with Claude Code in under an hour. No coding experience required.
+Go from zero to creating your first project with Claude Code in under an hour. No coding experience required.
 
-This kit includes two tools — an interviewer that helps you figure out what to build, and a workflow that helps you actually build it. Both are written for Claude to read, not you. Your job is to install them and follow Claude's lead.
+This kit includes an interviewer that helps you figure out what you want to create, and a set of workflows that help you actually do it — whether that's an app, a document, or a plan. All of it is written for Claude to read, not you. Your job is to install them and follow Claude's lead.
 <br />
 
 ***
@@ -12,8 +12,8 @@ This kit includes two tools — an interviewer that helps you figure out what to
 ```
 Install VS Code --> Install Claude Code Extension --> Get Claude Pro ($20/mo)
     --> Create a workspace folder --> Install this starter kit
-    --> /interviewer (figure out what to build)
-    --> Project workflow (build it step by step)
+    --> /interviewer (figure out what you want to create)
+    --> Workflow (create it step by step -- adapted to your output type)
     --> You have a thing. In under an hour.
 ```
 
@@ -92,7 +92,7 @@ Claude will create the folder and file for you. That CLAUDE.md file is how Claud
 
 Now let's give Claude some tools to work with. Type this into the Claude chat:
 
-> Please install the interviewer skill and project workflow from <https://github.com/emersonmccuin-pixel/claude-code-starter-kit> — read the README there for the file locations, then download and install everything.
+> Please install the interviewer skill and project workflows from <https://github.com/emersonmccuin-pixel/claude-code-starter-kit> — read the README there for the file locations, then download and install everything.
 
 Claude will:
 
@@ -100,54 +100,54 @@ Claude will:
 
 * Install the **interviewer skill** (so you can type `/interviewer` anytime)
 
-* Download the **project workflow** into your project folder
+* Download the **project workflows** into your project folder (one each for apps, documents, and plans)
 
-When it's done, you'll have two new tools ready to go.
+When it's done, you'll have everything ready to go.
 
 ***
 
-## Step 7: Figure Out What to Build (10 minutes)
+## Step 7: Figure Out What You Want to Create (10 minutes)
 
 This is the fun part. Type:
 
 > /interviewer
 
-Claude will ask you what interview style you want (casual questions, structured checklist, or rapid-fire) and how deep to go. Then it'll ask you questions to help you figure out what you actually want to build.
+Claude will ask you three things: what interview style you want (casual questions, structured checklist, or rapid-fire), how deep to go, and what you want to end up with — an app, a document, or a plan. Then it'll ask you questions to help you figure out what you actually want to create.
 
-**Don't know what to build?** Here are some ideas:
+**Not sure what to make?** Here are some ideas:
 
-| Personal               | Work                           |
-| ---------------------- | ------------------------------ |
-| Budget tracker         | Meeting notes organizer        |
-| Meal planner           | Email draft assistant          |
-| Vacation itinerary     | Weekly status report generator |
-| Journal / diary system | Client project tracker         |
-| Gift idea organizer    | Team knowledge base            |
-| Home inventory         | Onboarding guide for new hires |
-| Reading list tracker   | Competitive analysis template  |
-| Habit tracker          | Invoice generator              |
+| Apps & Tools           | Documents & Guides             | Plans & Strategies             |
+| ---------------------- | ------------------------------ | ------------------------------ |
+| Budget tracker         | Onboarding guide for new hires | Vacation itinerary             |
+| Habit tracker          | Team knowledge base            | Career decision framework      |
+| Invoice generator      | Competitive analysis           | Home renovation roadmap        |
+| Meeting notes app      | Email templates                | Product launch strategy        |
+| Home inventory         | How-to reference doc           | Weekly priority list           |
 
 Pick something small for your first project. You can always go bigger later.
 
-At the end of the interview, Claude will give you a summary of what you're building, key decisions, and next steps.
+At the end of the interview, Claude will give you a summary of what you're creating, key decisions, and next steps.
 
 ***
 
-## Step 8: Build It (30-45 minutes)
+## Step 8: Create It (30-45 minutes)
 
-Claude already knows what you want to build (from the interview). The project workflow file tells Claude how to manage the build process. Just say:
+Claude already knows what you want to create (from the interview). It'll tell you what to say next — something like "Let's start building based on the interview" or "Let's start the document" or "Let's structure the plan." Just follow its lead.
 
-> Let's start building based on the interview we just did. Use the project workflow.
+The workflow Claude uses adapts to what you're making:
 
-Claude will:
+* **An app** gets a multi-phase build process — plan, build, test, repeat
+* **A document** gets an outline-draft-revise cycle — structured writing, one section at a time
+* **A plan** gets structured and sharpened from the interview itself — often done in one session
 
-1. Create a plan with phases
-2. Set up a status tracker
-3. Walk you through each phase, explaining what it's doing and why
-4. Check in with you along the way
-5. Build the thing
+In all cases, Claude will:
 
-You don't need to understand the technical details. Claude explains everything in plain English and asks before making decisions.
+1. Create the right project files for your output type
+2. Walk you through the process, explaining what it's doing and why
+3. Check in with you along the way
+4. Deliver a finished result
+
+You don't need to understand the mechanics. Claude explains everything in plain English and asks before making decisions.
 
 **If you get stuck at any point**, just tell Claude:
 
@@ -161,23 +161,27 @@ It will stop and reorient you. That's what it's designed to do.
 
 ### Interviewer Skill
 
-A guided interview that helps you figure out what you want to build. Claude asks thoughtful questions, then organizes your answers into a clear summary with next steps.
+A guided interview that helps you figure out what you want to create. Claude asks thoughtful questions, then organizes your answers into a clear summary with next steps. It also asks what kind of output you want — an app, a document, or a plan — so the right workflow kicks in automatically.
 
-Works for anything — planning a project, making a decision, thinking through a career move, figuring out a vacation, or just getting your thoughts organized.
+Works for anything — building a tool, writing a guide, planning a strategy, making a decision, or just getting your thoughts organized.
 
 **Use it by typing:** `/interviewer` in Claude Code
 
-### Project Workflow
+### Project Workflows (three types)
 
-A structured process for building things with Claude Code. It turns a vague idea into a plan, and then into a finished thing — step by step, session by session.
+Structured processes that take the interview output and turn it into a finished thing. The interviewer figures out *what* you want to create — the workflow handles *how*.
 
-Pairs with the interviewer: the interview figures out *what* you want to build, this workflow handles *how*.
+* **App & Tool Workflow** — Multi-phase build process for software. Plan, build, test, repeat.
+* **Document & Guide Workflow** — Outline, draft, revise cycle for written deliverables.
+* **Plan & Strategy Workflow** — Structures your thinking into a clear, actionable plan.
 
-**Use it by:** dropping `project-workflow.md` into any project folder. Claude reads it and walks you through the rest.
+The interviewer picks the right one based on your answer. You don't have to choose manually.
+
+**Use them by:** dropping the `workflows/` folder into any project folder. Claude reads the right file and walks you through the rest.
 
 ### What These Files Actually Are
 
-Both files are **instructions for Claude**, not documentation for you. They tell Claude:
+These files are **instructions for Claude**, not documentation for you. They tell Claude:
 
 * What to do
 
@@ -202,11 +206,14 @@ You don't need to read or memorize them. Just install them and follow Claude's l
    * **Mac/Linux:** `~/.claude/skills/interviewer/`
 2. That's it. Type `/interviewer` in Claude Code to use it.
 
-**Project Workflow:**
+**Project Workflows:**
 
-1. Copy `project-workflow.md` into the root of any project you want to build
+1. Copy the `workflows/` folder into your project folder (or copy only the one you need):
+   * `workflows/app-workflow.md` — for apps and tools
+   * `workflows/document-workflow.md` — for documents and guides
+   * `workflows/plan-workflow.md` — for plans and strategies
 2. Start a Claude Code conversation in that project
-3. Claude reads the file and walks you through the process
+3. Claude reads the right file and walks you through the process
 
 ***
 
@@ -222,7 +229,10 @@ That's what the interviewer skill is for. It helps you figure it out.
 That depends on you. Try it for one month. Use it every day. If it doesn't change how you work, cancel.
 
 **Can I use this for things that aren't apps?**
-Absolutely. Organizing notes, planning events, writing documents, managing finances, drafting emails — Claude Code works for all of it. The interviewer skill works for any topic, not just software.
+Yes — that's the whole point. The interviewer asks what you want to end up with, and the system adapts. Pick "A document or guide" and you get an outline-draft-revise process. Pick "A plan or strategy" and the interview output gets structured into something actionable. Pick "Other" and describe what you need — Claude will figure out the best approach.
+
+**What if I don't know which workflow I need?**
+You don't have to. The interviewer asks what you want to create and picks the right workflow automatically. If you're not sure, just describe what you're going for and Claude will suggest the best fit.
 
 **What if something goes wrong?**
 Tell Claude. Literally type "something went wrong" or "I'm stuck" and it will help you. You can also open an issue on this repo.

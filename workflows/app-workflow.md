@@ -1,14 +1,14 @@
-# Structured Project Workflow — Claude Code Instructions
+# App & Tool Workflow — Claude Code Instructions
 
 > **This file is meant to be read by Claude Code, not by a human.**
-> Drop this file into your project folder and Claude will walk you through everything.
+> Drop this file into your project folder when you're building an app or tool.
 > You don't need to understand or memorize any of this — just follow Claude's lead.
 
 ---
 
 ## What This Is
 
-This is a structured workflow for building projects with Claude Code. It turns a vague idea into a concrete plan and then into a finished thing — step by step, session by session.
+This is a structured workflow for building apps and tools with Claude Code. It turns a vague idea into a concrete plan and then into working software — step by step, session by session.
 
 It pairs with the **`/interviewer`** skill: the interview figures out *what* you want to build, and this workflow gives you a repeatable process for *how* to build it.
 
@@ -36,7 +36,7 @@ You are guiding a user who may not be technical. Your job is to be their project
 
 ### Before Anything Else: Switch to Opus
 
-The very first thing you do — before the interview, before any planning — is make sure the user is on **Opus**. This is the smartest model and the right one for the entire setup process (Steps 0–3).
+The very first thing you do — before any planning — is make sure the user is on **Opus**. This is the smartest model and the right one for the entire setup process (Steps 1–3).
 
 **Walk the user through it:**
 
@@ -49,33 +49,17 @@ If they're already on Opus, just confirm: *"You're already on Opus — perfect. 
 
 ---
 
-### Steps 0–3: The Setup Session
+### Steps 1–3: The Setup Session
 
-Steps 0 through 3 all happen in one conversation. This is your initial setup — interview, docs, plan. **Do NOT tell the user to `/clear` between these steps.** They're all part of one session.
+Steps 1 through 3 all happen in one conversation. This is your initial setup — docs, plan, phases. **Do NOT tell the user to `/clear` between these steps.** They're all part of one session.
+
+If the user just came from the `/interviewer` skill, you should have the interview output available. Use it as the foundation for everything below.
 
 ---
 
-### Step 0: Discovery Interview
-
-Before writing any plan, run the **`/interviewer`** skill. Ask the user questions to figure out what they're actually building — scope, constraints, priorities, unknowns.
-
-**If the `/interviewer` skill is not installed:**
-
-1. Tell the user: *"The interview skill isn't installed yet. Let me grab it for you — it'll just take a moment."*
-2. Fetch the skill from the public repo: https://github.com/emersonmccuin-pixel/claude-code-starter-kit
-3. Read the `interviewer/SKILL.md` and `interviewer/references/question-framework.md` files from that repo
-4. Install them to the user's Claude Code skills directory:
-   - **Windows:** `C:\Users\[username]\.claude\skills\interviewer\SKILL.md` and `C:\Users\[username]\.claude\skills\interviewer\references\question-framework.md`
-   - **Mac/Linux:** `~/.claude/skills/interviewer/SKILL.md` and `~/.claude/skills/interviewer/references/question-framework.md`
-5. Confirm to the user: *"Done — the interview skill is installed. You can use `/interviewer` anytime now. Let's use it to figure out what we're building."*
-
-**If you can't access the repo for any reason**, fall back to running a guided discovery conversation yourself — ask the same kinds of questions (what are you building, why, what does success look like, what constraints exist) and compile the answers into a summary.
-
-**Why this step exists:** Writing a plan without understanding what the user wants means you're guessing at their intent. The interview eliminates guesswork. Tell the user: *"Before we build anything, I want to make sure I understand exactly what you're going for. I'm going to ask you some questions first."*
-
 ### Step 1: Create Project Docs
 
-After the interview, create two documents in a `docs/` folder:
+After the interview (or after the user describes what they want to build), create two documents in a `docs/` folder:
 
 - **`docs/plan.md`** — The full build plan, broken into phases. Each phase has specific tasks. Seed this from the interview output.
 - **`docs/status.md`** — A tracker that mirrors the plan's tasks with statuses (TODO / IN PROGRESS / DONE) and a session log.

@@ -51,11 +51,19 @@ Options:
 - Quick (5-7 questions, ~5 min)
 - Standard (10-15 questions, ~10 min)
 - Deep (15-20 questions, ~20 min)
+
+Question 3: "What do you want to end up with at the end of this?"
+Options:
+- A working app or tool (something you can use or run)
+- A document or guide (written content like a report, template, or reference)
+- A plan or strategy (a roadmap, decision framework, or approach)
 ```
+
+**Store the output type answer.** Refer to it when generating the output format (see Output Generation) and when selecting the handoff workflow (see Handing Off to the Right Workflow).
 
 **Do NOT ask about domain or topic type.** The user's initial prompt tells you what they want to think through. This skill works for ANY topic. Adapt your questions and output format based on what they're actually discussing.
 
-**Tell the user:** *"Before we dive in, let me ask how you'd like this to go."* Then present the options.
+**Tell the user:** *"Before we dive in, let me ask a few quick things about how you'd like this to go."* Then present the options.
 
 ### Phase 1: Opening (2-3 questions, or 1-2 if Quick)
 
@@ -109,27 +117,58 @@ After the interview, compile a structured deliverable. **Tell the user what you'
 4. **Open Questions** — What remains unresolved
 5. **Next Steps** — Concrete actions to take
 
-**Adapt the format to the topic.** Add relevant sections:
-- Feature idea -> user stories, acceptance criteria, scope
-- Planning -> priorities, time blocks, success criteria
-- Trip -> logistics, must-haves, contingencies
-- Career decision -> pros/cons, values alignment, risks
-- Purchase -> requirements, budget, alternatives considered
-- Creative project -> vision, constraints, first milestone
-- Relationship issue -> perspectives, needs, boundaries
+**Adapt the format based on the output type selected in Phase 0:**
+
+**If "A working app or tool":**
+- Add: user stories or feature descriptions, acceptance criteria, scope boundaries
+- Add: tech constraints or preferences mentioned during the interview
+- Frame Next Steps as build phases (e.g., "Phase 1: Setup, Phase 2: Core feature")
+
+**If "A document or guide":**
+- Add: proposed outline or section structure
+- Add: intended audience and purpose
+- Add: tone and format preferences (formal, conversational, technical, etc.)
+- Frame Next Steps as drafting milestones (e.g., "Create outline, draft sections 1-3, revise")
+
+**If "A plan or strategy":**
+- Add: decision criteria used or implied
+- Add: options considered and eliminated (with reasoning)
+- Add: key assumptions and risks
+- Frame Next Steps as validation or execution actions (e.g., "Validate assumption X, get buy-in from Y")
+
+**If freeform "Other":**
+- Use judgment to determine the most useful additional sections based on what the user described
+- Ask the user: *"What would make this output most useful to you?"*
+
+**Regardless of output type, also adapt to the specific topic.** A vacation plan needs logistics; a career decision needs pros/cons and values alignment; a feature idea needs scope — add whatever sections are relevant.
 
 **After delivering the output, ask:** *"Does this capture it? Anything you'd change or add?"*
 
-### Handing Off to the Project Workflow
+### Handing Off to the Right Workflow
 
-If a `project-workflow.md` file exists in the current project folder, **bridge the user into the build process** after they confirm the interview output:
+After the user confirms the interview output, bridge them into the next step based on the output type they selected in Phase 0.
 
-1. Tell them: *"Great — now we have a clear picture of what we're building. The next step is to turn this into a plan and start building. I have a project workflow that will walk us through that step by step."*
-2. Tell them: *"Just say 'Let's start building based on the interview' and I'll take it from there."*
+**If "A working app or tool":**
+Check whether `workflows/app-workflow.md` exists in the current project folder.
+- If yes: Tell them: *"Great — now we have a clear picture of what we're building. The next step is to turn this into a plan and start building. I have a workflow that will walk us through that step by step. Just say 'Let's start building based on the interview' and I'll take it from there."*
+- If no: Tell them: *"Now that we know what we're building, we can start on it whenever you're ready. Just tell me to get started."*
 
-If `project-workflow.md` does NOT exist, tell the user: *"Now that we know what we're building, we can start on it whenever you're ready. Just tell me to get started."*
+**If "A document or guide":**
+Check whether `workflows/document-workflow.md` exists in the current project folder.
+- If yes: Tell them: *"Great — now we know what we're creating. The next step is to create an outline and start drafting. I have a workflow for this. Just say 'Let's start the document based on the interview' and I'll take it from there."*
+- If no: Tell them: *"Now that we know what we're creating, we can start drafting whenever you're ready. Just tell me to get started."*
 
-**Do NOT silently transition into the workflow.** Always tell the user what's happening next and let them decide when to proceed.
+**If "A plan or strategy":**
+Check whether `workflows/plan-workflow.md` exists in the current project folder.
+- If yes: Tell them: *"Great — the interview already gave us most of what we need. The next step is to structure this into a clear, usable plan. Just say 'Let's structure the plan from the interview' and I'll take it from there."*
+- If no: Tell them: *"The interview output is the foundation of your plan. We can structure it further whenever you're ready — just tell me to continue."*
+
+**If freeform "Other":**
+Read what the user typed. If it maps reasonably to one of the three workflows above, suggest that workflow. If it doesn't fit any of them, tell them: *"Based on what you told me, let's work through this together — I'll adapt as we go. Just tell me when you're ready to continue."*
+
+**Backward compatibility:** If none of the `workflows/` files exist but a `project-workflow.md` file exists in the project root, use that for app/tool projects (it's the older version of the app workflow).
+
+**Do NOT silently transition into any workflow.** Always tell the user what's happening next and let them decide when to proceed.
 
 ---
 
